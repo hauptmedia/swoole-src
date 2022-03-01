@@ -62,21 +62,21 @@ else
     dir="swoole_*"
 fi
 echo "${dir}" > tests.list
-for i in 1 2 3
-do
-    if [ "`has_failures`" ]; then
-        if [ ${i} -gt "1" ]; then
-            sleep ${i}
-            echo "" && echo "😮 Retry failed tests#${i}:" && echo ""
-        fi
-        cat tests.list
-        timeout=`echo | expr ${i} \* 15 + 15`
+#for i in 1 2 3
+#do
+#    if [ "`has_failures`" ]; then
+#        if [ ${i} -gt "1" ]; then
+#            sleep ${i}
+#            echo "" && echo "😮 Retry failed tests#${i}:" && echo ""
+#        fi
+#        cat tests.list
+#        timeout=`echo | expr ${i} \* 15 + 15`
         options="${options} --set-timeout ${timeout}"
         run_tests tests.list "${options}"
-    else
-        break
-    fi
-done
+#    else
+#        break
+#    fi
+#done
 if [ "`should_exit_with_error`" ]; then
     exit 255
 fi

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit bootstrap="include/bootstrap.php">
+    <testsuite name="swoole">
+        <directory suffix=".phpt">swoole_atomic</directory>
+        <directory suffix=".phpt">swoole_channel_coro</directory>
+    </testsuite>
+</phpunit>
