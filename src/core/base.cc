@@ -876,6 +876,11 @@ size_t DataHead::dump(char *_buf, size_t _len) {
                        time);
 }
 
+void DataHead::print() {
+    sw_tg_buffer()->length = dump(sw_tg_buffer()->str, sw_tg_buffer()->size);
+    printf("%.*s", (int) sw_tg_buffer()->length, sw_tg_buffer()->str);
+}
+
 std::string dirname(const std::string &file) {
     size_t index = file.find_last_of('/');
     if (index == std::string::npos) {
