@@ -55,7 +55,12 @@ fi
 
 if [ $? -eq 0 ]; then
 #    PHPT=1 ${TEST_PHP_EXECUTABLE} -d "memory_limit=1024m" ${__DIR__}/run-tests ${glob}
-    cd ${__DIR__} && ./include/lib/vendor/bin/phpunit --log-junit test-result.xml --default-time-limit 30 --process-isolation
+    cd ${__DIR__}
+    mkdir test-results || true
+    for testsuite in `ls -1 -d swoole_*`; do
+      echo "Running PHPUnit for testsuite $testsuite"
+       ./include/lib/vendor/bin/phpunit --log-junit test-results/$testsuite.xml --default-time-limit 30 --process-isolation --no-interaction $testsuite &
+    done
 fi
 
 # after tests
