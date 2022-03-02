@@ -59,7 +59,7 @@ if [ $? -eq 0 ]; then
     mkdir test-results || true
     for testsuite in `ls -1 -d swoole_*`; do
       echo "Running PHPUnit for testsuite $testsuite"
-       ./include/lib/vendor/bin/phpunit --log-junit test-results/$testsuite.xml --default-time-limit 30 --process-isolation --no-interaction $testsuite &
+       ./include/lib/vendor/bin/phpunit --log-junit test-results/$testsuite.xml --default-time-limit 30 --process-isolation --testdox --no-interaction $testsuite &
     done
 fi
 
