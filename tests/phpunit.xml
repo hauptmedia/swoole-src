@@ -1,7 +1,116 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <phpunit bootstrap="include/bootstrap.php">
-    <testsuite name="swoole">
-        <directory suffix=".phpt">swoole_atomic</directory>
-        <directory suffix=".phpt">swoole_channel_coro</directory>
-    </testsuite>
+    <testsuites>
+        <testsuite name="swoole_atomic">
+            <directory suffix=".phpt">swoole_atomic</directory>
+        </testsuite>
+        <testsuite name="swoole_channel_coro">
+            <directory suffix=".phpt">swoole_channel_coro</directory>
+        </testsuite>
+        <testsuite name="swoole_client_coro">
+            <directory suffix=".phpt">swoole_client_coro</directory>
+        </testsuite>
+        <testsuite name="swoole_client_sync">
+            <directory suffix=".phpt">swoole_client_sync</directory>
+        </testsuite>
+        <testsuite name="swoole_coroutine">
+            <directory suffix=".phpt">swoole_coroutine</directory>
+        </testsuite>
+        <testsuite name="swoole_coroutine_scheduler">
+            <directory suffix=".phpt">swoole_coroutine_scheduler</directory>
+        </testsuite>
+        <testsuite name="swoole_coroutine_select">
+            <directory suffix=".phpt">swoole_coroutine_select</directory>
+        </testsuite>
+        <testsuite name="swoole_coroutine_system">
+            <directory suffix=".phpt">swoole_coroutine_system</directory>
+        </testsuite>
+        <testsuite name="swoole_coroutine_util">
+            <directory suffix=".phpt">swoole_coroutine_util</directory>
+        </testsuite>
+        <testsuite name="swoole_coroutine_wait_group">
+            <directory suffix=".phpt">swoole_coroutine_wait_group</directory>
+        </testsuite>
+        <testsuite name="swoole_curl">
+            <directory suffix=".phpt">swoole_curl</directory>
+        </testsuite>
+        <testsuite name="swoole_event">
+            <directory suffix=".phpt">swoole_event</directory>
+        </testsuite>
+        <testsuite name="swoole_feature">
+            <directory suffix=".phpt">swoole_feature</directory>
+        </testsuite>
+        <testsuite name="swoole_function">
+            <directory suffix=".phpt">swoole_function</directory>
+        </testsuite>
+        <testsuite name="swoole_global">
+            <directory suffix=".phpt">swoole_global</directory>
+        </testsuite>
+        <testsuite name="swoole_http2_client_coro">
+            <directory suffix=".phpt">swoole_http2_client_coro</directory>
+        </testsuite>
+        <testsuite name="swoole_http2_server">
+            <directory suffix=".phpt">swoole_http2_server</directory>
+        </testsuite>
+        <testsuite name="swoole_http2_server_coro">
+            <directory suffix=".phpt">swoole_http2_server_coro</directory>
+        </testsuite>
+        <testsuite name="swoole_http_client_coro">
+            <directory suffix=".phpt">swoole_http_client_coro</directory>
+        </testsuite>
+        <testsuite name="swoole_http_server">
+            <directory suffix=".phpt">swoole_http_server</directory>
+        </testsuite>
+        <testsuite name="swoole_http_server_coro">
+            <directory suffix=".phpt">swoole_http_server_coro</directory>
+        </testsuite>
+        <testsuite name="swoole_library">
+            <directory suffix=".phpt">swoole_library</directory>
+        </testsuite>
+        <testsuite name="swoole_lock">
+            <directory suffix=".phpt">swoole_lock</directory>
+        </testsuite>
+        <testsuite name="swoole_mysql_coro">
+            <directory suffix=".phpt">swoole_mysql_coro</directory>
+        </testsuite>
+        <testsuite name="swoole_postgres_coro">
+            <directory suffix=".phpt">swoole_postgres_coro</directory>
+        </testsuite>
+        <testsuite name="swoole_process">
+            <directory suffix=".phpt">swoole_process</directory>
+        </testsuite>
+        <testsuite name="swoole_process_pool">
+            <directory suffix=".phpt">swoole_process_pool</directory>
+        </testsuite>
+        <testsuite name="swoole_redis_coro">
+            <directory suffix=".phpt">swoole_redis_coro</directory>
+        </testsuite>
+        <testsuite name="swoole_redis_server">
+            <directory suffix=".phpt">swoole_redis_server</directory>
+        </testsuite>
+        <testsuite name="swoole_runtime">
+            <directory suffix=".phpt">swoole_runtime</directory>
+        </testsuite>
+        <testsuite name="swoole_server">
+            <directory suffix=".phpt">swoole_server</directory>
+        </testsuite>
+        <testsuite name="swoole_server_coro">
+            <directory suffix=".phpt">swoole_server_coro</directory>
+        </testsuite>
+        <testsuite name="swoole_server_port">
+            <directory suffix=".phpt">swoole_server_port</directory>
+        </testsuite>
+        <testsuite name="swoole_socket_coro">
+            <directory suffix=".phpt">swoole_socket_coro</directory>
+        </testsuite>
+        <testsuite name="swoole_table">
+            <directory suffix=".phpt">swoole_table</directory>
+        </testsuite>
+        <testsuite name="swoole_timer">
+            <directory suffix=".phpt">swoole_timer</directory>
+        </testsuite>
+        <testsuite name="swoole_websocket_server">
+            <directory suffix=".phpt">swoole_websocket_server</directory>
+        </testsuite>
+    </testsuites>
 </phpunit>
