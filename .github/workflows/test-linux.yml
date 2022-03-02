@@ -43,8 +43,8 @@ jobs:
       if: always()
       uses: actions/upload-artifact@v2
       with:
-        name: PHP ${{ matrix.php }} Test
-        files: tests/test-result.xml
+        name: PHP ${{ matrix.php }}
+        path: tests/test-result.xml
 
   publish-test-results:
     name: "Publish Unit Tests Results"
